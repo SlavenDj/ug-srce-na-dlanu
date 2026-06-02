@@ -1,4 +1,4 @@
-export type Language = "sr" | "en";
+export type Language = "sr" | "sr-latin" | "en";
 
 export interface Content {
   nav: {
@@ -551,6 +551,380 @@ export const content: Record<Language, Content> = {
       socialTitle: "Пратите нас",
       quickLinks: "Брзи линкови",
       contactTitle: "Контакт",
+    },
+  },
+  "sr-latin": {
+    nav: {
+      home: "NASLOVNA",
+      about: "O NAMA",
+      actions: "HUMANITARNE AKCIJE",
+      news: "VESTI",
+      contact: "KONTAKT",
+      volunteer: "VOLONTIRANJE",
+      partners: "PARTNERI",
+      team: "TIM",
+      gallery: "GALERIJA",
+      faq: "ČPP",
+    },
+    hero: {
+      title: "Srce na Dlanu",
+      subtitle: "Dobrodošli na volonterske i humanitarne akcije",
+      cta: "Pridružite nam se",
+      ctaSecondary: "Saznajte više",
+    },
+    about: {
+      title: "O Nama",
+      description:
+        'Udruženje je dobrovoljna, nestranačka, nepolitička, nevladina, neprofitna organizacija na dobrovoljnoj bazi, a radi ostvarivanja zajedničkog i opšteg interesa i čija osnovna svrha nije sticanje dobiti. Naš prvi sastanak Udruženja građana "Srce na dlanu" Banja Luka dogodio se 07.09.2013. godine, kada se mlada grupa ljudi skupila u jednoj prostoriji, sa jednim te istim ciljem, tj. da imamo Udruženje koje može i pomoći ljudima kojima je pomoć neophodna, potom da vršimo procene naših korisnika i da vršimo edukacije za takvu ciljnu grupu.',
+      founded: "Osnovano 2013",
+      mission: "Naša Misija",
+      missionText:
+        "Pružiti humanitarnu pomoć i podršku najugroženijim kategorijama stanovništva, promovisati volonterizam i aktivno učešće građana u zajednici, te doprinosti boljem društvu za sve.",
+      vision: "Naša Vizija",
+      visionText:
+        "Društvo u kojem svaki pojedinac ima podršku koja mu je potrebna, u kojem solidarnost i briga za druge nisu izuzetak nego pravilo, i u kojem zajednica funkcioniše kao jedna velika porodica.",
+      values: [
+        "Solidarnost i empatija",
+        "Transparentnost i odgovornost",
+        "Dobrovoljnost i posvećenost",
+        "Jednakost i poštovanje",
+        "Inovativnost u humanitarnom radu",
+      ],
+    },
+    timeline: {
+      title: "Naša Istorija",
+      subtitle: "Ključni trenuci koji su oblikovali naše udruženje",
+      items: [
+        {
+          year: "2013",
+          title: "Osnivanje udruženja",
+          description:
+            "Mlada grupa ljudi okupila se u Banjaluci i osnovala Udruženje građana \u201ESrce na dlanu\u201C sa ciljem da pomaže ljudima u nevolji.",
+        },
+        {
+          year: "2014",
+          title: "Prva humanitarna akcija",
+          description:
+            "Sproveli smo našu prvu veliku humanitarnu akciju pomoći porodicama koje su pogođene poplavama u regionu.",
+        },
+        {
+          year: "2016",
+          title: "Proširili smo se na 5 gradova",
+          description:
+            "Naša mreža volontera proširila se na pet gradova u Bosni i Hercegovini, omogućavajući veći doseg pomoći.",
+        },
+        {
+          year: "2018",
+          title: "Nagrada za humanitarni rad",
+          description:
+            "Primili smo prvu javnu nagradu za naš rad u oblasti humanitarnih akcija i volonterizma.",
+        },
+        {
+          year: "2020",
+          title: "Pandemija - pojačan rad",
+          description:
+            "Tokom pandemije COVID-19, intenzivirali smo naše aktivnosti i pomogli stotinama porodica u nevolji.",
+        },
+        {
+          year: "2023",
+          title: "10 godina postojanja",
+          description:
+            "Obeležili smo deset godina postojanja sa preko 500 sprovedenih humanitarnih akcija i 120+ aktivnih volontera.",
+        },
+        {
+          year: "2025",
+          title: "Republička nagrada",
+          description:
+            "Naše udruženje je dobilo Republičku nagradu za izuzetan doprinos humanitarnom radu i volonterizmu.",
+        },
+      ],
+    },
+    goals: {
+      title: "Naši Ciljevi",
+      quote:
+        "Kad nam sreća zatvori jedna vrata, često nam otvori i druga, ali mi ponekad znamo predugo gledati u ona zatvorena i ne vidimo otvorena.",
+      quoteAuthor: "— Helen Keler",
+      cards: [
+        {
+          title: "Pomažeš drugima",
+          description:
+            "Pomažeš drugima i osećaš se dobro zbog toga, dobiješ iskren osmeh, hvalu i slično. Zato nemoj da čekaš sutra, već danas možeš nekog da usrećiš i da mu/joj pomogneš, dovoljno je samo da nam se obratite/obratiš.",
+        },
+        {
+          title: "Humanitarne Akcije",
+          description:
+            "Imamo mnogo urađenih humanitarnih akcija iza sebe. Bez pomoći dobrih ljudi ne bismo mogli da sprovedemo niti jednu humanitarnu akciju. Pridružite nam se, izdvojite svoje dragoceno vreme i pomozite nekome.",
+        },
+        {
+          title: "Budi Sponzor",
+          description:
+            "Oduvek ste želeli da pomognete nekom ko vam ne može uzvratiti datu pomoć?! Ono što možete da uradite bez poteškoća jeste da postanete naš sponzor i da nam pomognete na bilo koji način.",
+        },
+        {
+          title: "Postani Volonter",
+          description:
+            "Ovo je savršena prilika da nam se pridružite i pomognete nam, da budemo još jači i da naša humanost prevaziđe granice, jer zajedno možemo mnogo toga, stoga, budite deo našeg tima jer volontiranje hrani srce, a ne ego!",
+        },
+      ],
+      progressTitle: "Dobra dela ne štete",
+      raised: "Sakupljeno",
+      goal: "Cilj",
+      percent: 10,
+    },
+    impact: {
+      title: "Naš Uticaj",
+      subtitle: "Brojke koje govore više od reči - zajedno stvaramo promene",
+      items: [
+        { value: "500+", label: "Pomoćnih paketa podeljeno", icon: "📦" },
+        { value: "120+", label: "Aktivnih volontera", icon: "🙋" },
+        { value: "85+", label: "Porodica pomognuto", icon: "👨‍👩‍👧‍👦" },
+        { value: "10+", label: "Gradova u regiji", icon: "🏙" },
+        { value: "12", label: "Godina iskustva", icon: "📅" },
+        { value: "KM 150K+", label: "Sakupljenih sredstava", icon: "💰" },
+      ],
+    },
+    actions: {
+      title: "Humanitarne Akcije",
+      events: [
+        {
+          date: "Mart 01, 2020",
+          location: "Banjaluka",
+          needed: "Potrebno 5,300 KM",
+          title: "POMOZIMO DEČAKU VLADIMIRU OBOLELOM OD CEREBRALNE PARALIZE",
+          description:
+            "Devetogodišnji dečak Vladimir Đurić iz Banja Luke oboleo je od cerebralne paralize. Zbog njegovog zdravstvenog stanja gotovo celo vreme provodi u ležećem ili polusedećem položaju. Ovakav položaj tela dovodi do otežanog rada unutrašnjih organa i preti da dođe do atrofije mišića unutrašnjih organa čime bi dete bilo dovedeno u neposrednu životnu opasnost. Ova patnja po Vladino zdravlje je REŠIVA. Potrebno je kupiti ORTOPEDSKO POMAGALO VERTIKALIZATOR, koje bi dečaku omogućilo da deo dana provodi u uspravnom položaju.",
+        },
+        {
+          date: "Maj 01, 2020",
+          location: "Beograd",
+          needed: "2 miliona i 100 hiljada dolara",
+          title: "Sofija Markuljević",
+          description:
+            "Devojčica Sofija Markuljević je rođena 25.05.2019. godine, u Beogradu. Boluje od izuzetno progresivne i smrtonosne neuromišićne bolesti - Spinalna mišićna atrofija, tip 1. Deca sa ovom dijagnozom žive najduže do dve godine starosti, a bolest se manifestuje progresivnom atrofijom mišića i gubitkom osnovnih životnih funkcija, kao što su: hodanje, gutanje, disanje...",
+        },
+      ],
+    },
+    team: {
+      title: "Naš Tim",
+      subtitle: "Ljudi koji stoje iza svih naših akcija - posvećeni volonteri i stručnjaci",
+      members: [
+        {
+          name: "Marko Petrović",
+          role: "Predsednik",
+          bio: "Sociolog po obrazovanju, volonter od 2013. godine. Posvećen humanitarnom radu i pomoći zajednici.",
+          initials: "MP",
+        },
+        {
+          name: "Jelena Miletć",
+          role: "Potpredsednica",
+          bio: "Pravnica sa iskustvom u NVO sektoru. Koordiniše našim glavnim projektima i kampanjama.",
+          initials: "JM",
+        },
+        {
+          name: "Stefan Dabić",
+          role: "Koordinator volontera",
+          bio: "Student sociologije, volonter već 5 godina. Organizuje i vodi timove volontera na terenu.",
+          initials: "SD",
+        },
+        {
+          name: "Ana Jovanović",
+          role: "PR i komunikacije",
+          bio: "Novinarka po pozivu, bavi se promocijom našeg rada i komunikacijom sa javnošću i medijima.",
+          initials: "AJ",
+        },
+        {
+          name: "Nemanja Korać",
+          role: "Finansijski direktor",
+          bio: "Ekonomista koji vodi brigu o finansijskoj transparentnosti i pravilnom korišćenju sredstava.",
+          initials: "NK",
+        },
+        {
+          name: "Mila Stojanović",
+          role: "Koordinator pomoći",
+          bio: "Socijalna radnica koja procenjuje potrebe korisnika i koordiniše isporuku pomoći na terenu.",
+          initials: "MS",
+        },
+      ],
+    },
+    gallery: {
+      title: "Galerija",
+      subtitle: "Trenuci koji govore više od reči - pogledajte naš rad na delu",
+      categories: ["Sve", "Akcije", "Volonteri", "Događaji", "Pomoć"],
+      items: [
+        { title: "Podela paketa", category: "Akcije", description: "Podela humanitarnih paketa porodicama u Banjaluci", color: "#c0392b" },
+        { title: "Volonterski dan", category: "Volonteri", description: "Naš tim volontera na zajedničkom druženju", color: "#2c3e50" },
+        { title: "Nova godina", category: "Događaji", description: "Novogodišnja akcija za decu bez roditeljske brige", color: "#e67e22" },
+        { title: "Školski paketi", category: "Pomoć", description: "Deca dobijaju školske potrepštine za novu školsku godinu", color: "#27ae60" },
+        { title: "Vaskrs", category: "Događaji", description: "Zabava za decu povodom Vaskrsa", color: "#8e44ad" },
+        { title: "Zimska pomoć", category: "Akcije", description: "Podela drva za grejanje porodicama u nevolji", color: "#2980b9" },
+        { title: "Timski sastanak", category: "Volonteri", description: "Planiranje novih akcija i projekata", color: "#16a085" },
+        { title: "Branitelji", category: "Pomoć", description: "Pomoć starim i iznemoglim osobama", color: "#d35400" },
+      ],
+    },
+    partners: {
+      title: "Naši Partneri",
+      subtitle: "Ponosni smo na našu mrežu partnera koji dele našu viziju",
+      becomeTitle: "Postanite naš Partner",
+      becomeText:
+        "Tražimo preduzeća, ustanove i pojedince koji žele da podrže naš rad kroz finansijsku ili logističku pomoć, dobrovoljno angažovanje ili zajedničke projekte. Svaki partner nam omogućava da budemo bolji i da pomognemo više ljudi.",
+      benefits: [
+        "Vidljivost vašeg brenda na našim kampanjama",
+        "Prilika za korporativno volontiranje",
+        "Saradnja na humanitarnim projektima",
+        "Javno priznanje i zahvala",
+        "Mogućnost zajedničkih projekata",
+      ],
+      cta: "Postanite partner",
+      logos: [
+        { name: "Catalist", placeholder: "C" },
+        { name: "Ministarstvo", placeholder: "M" },
+        { name: "Grad Banjaluka", placeholder: "GB" },
+        { name: "Radio", placeholder: "R" },
+        { name: "Banka", placeholder: "B" },
+        { name: "TV Kanal", placeholder: "TV" },
+      ],
+    },
+    volunteer: {
+      title: "PRIDRUŽITE NAM SE",
+      sponsorTitle: "Budi Sponzor",
+      sponsorDescription:
+        "Oduvek ste želeli da pomognete nekom ko vam ne može uzvratiti datu pomoć?! Ono što možete da uradite bez poteškoća jeste da postanete naš sponzor i da nam pomognete na bilo koji način.",
+      volunteerTitle: "Postani Volonter",
+      volunteerDescription:
+        "Ovo je savršena prilika da nam se pridružite i pomognete nam, da budemo još jači i da naša humanost prevaziđe granice, jer zajedno možemo mnogo toga, stoga, budite deo našeg tima jer volontiranje hrani srce, a ne ego!",
+      cta: "Pridružite nam se",
+    },
+    testimonials: {
+      title: "Šta kažu o nama",
+      subtitle: "Glasovi iz zajednice - ljudi kojima smo pomogli i partneri koji nam veruju",
+      items: [
+        {
+          quote:
+            "Srce na dlanu nam je pružilo pomoć kada nam je najteže bilo. Bez njih ne bismo uspeli. Od srca im hvala na svemu što su učinili za našu porodicu.",
+          author: "Marija M.",
+          role: "Korisnica pomoći",
+        },
+        {
+          quote:
+            "Kao kompanija, prepoznali smo izuzetan rad ovog udruženja. Njihova posvećenost i transparentnost su razlog zašto smo postali njihovi partneri. Svaka preporuka.",
+          author: "Dragan S.",
+          role: "Partner kompanija",
+        },
+        {
+          quote:
+            "Volontiranje sa Srcem na Dlanu mi je promenilo život. Naučio sam da mali čini dobrote mogu napraviti veliku razliku. Ovo je više od udruženja - ovo je porodica.",
+          author: "Nikola V.",
+          role: "Volonter 3+ godine",
+        },
+      ],
+    },
+    faq: {
+      title: "Često Postavljana Pitanja",
+      subtitle: "Odgovori na najčešća pitanja o našem radu i kako možete učestvovati",
+      items: [
+        {
+          question: "Kako mogu postati volonter?",
+          answer:
+            "Dovoljno je da nas kontaktirate preko formulara na sajtu ili putem e-pošte. Organizujemo sastanke za nove volontere svakog prvog ponedeljka u mesecu, gde ćete saznati sve o našim aktivnostima i kako možete učestvovati.",
+        },
+        {
+          question: "Kako mogu donirati?",
+          answer:
+            "Možete donirati novčana sredstva na naš žiro račun, pomoć u vidu hrane, odeće ili drugih potrepština. Takođe možete organizovati humanitarnu akciju u vašoj kompaniji ili zajednici u saradnji sa nama.",
+        },
+        {
+          question: "Da li je svaka pomoć dobrodošla?",
+          answer:
+            "Apsolutno! Svaka pomoć, bez obzira na iznos ili oblik, nam omogućava da pomognemo više ljudi. Primamo novčane donacije, hranu, odeću, obuću, školski pribor, igračke i sve ono što može koristiti našim korisnicima.",
+        },
+        {
+          question: "Kako garantujete transparentnost?",
+          answer:
+            "Svaku donaciju evidentiramo i objavljujemo izveštaje o korišćenju sredstava na našem sajtu i društvenim mrežama. Imamo godišnji revizorski izveštaj i otvoreni smo za sva pitanja građana.",
+        },
+        {
+          question: "U kojim gradovima delujete?",
+          answer:
+            "Trenutno delujemo u 10+ gradova u Bosni i Hercegovini, sa centralnom bazom u Banjaluci. Planovi za proširenje uključuju nove gradove u regionu tokom naredne godine.",
+        },
+        {
+          question: "Da li organizujete donacije za preduzeća?",
+          answer:
+            "Da! Imamo poseban program za korporativne partnere koji uključuje organizaciju humanitarnih akcija u okviru vaše kompanije, teambuilding kroz volontiranje i zajedničke projekte.",
+        },
+      ],
+    },
+    help: {
+      title: "Pomozite nam da budemo još jači",
+      description:
+        "Pomažeš drugima i osećaš se dobro zbog toga, dobiješ iskren osmeh, hvalu i slično. Zato nemoj da čekaš sutra, već danas možeš nekog da usrećiš i da mu/joj pomogneš, dovoljno je samo da nam se obratite/obratiš.",
+      question: "Trebate našu pomoć ili poznajete nekoga kome je neophodna?",
+      cta: "Kontaktirajte nas",
+    },
+    cta: {
+      title: "Spremni ste da napravite razliku?",
+      subtitle:
+        "Svaka donacija, svako volontiranje, svaki podeljeni post je promena za nekoga. Pridružite se danas.",
+      primaryCta: "Postanite partner",
+      secondaryCta: "Prijavite se kao volonter",
+    },
+    newsletter: {
+      title: "Budite u toku",
+      subtitle: "Prijavite se na naš newsletter i budite prvi koji će saznati za nove akcije i projekte",
+      placeholder: "Unesite vašu e-mail adresu",
+      button: "Prijavi se",
+      success: "Uspešno ste se prijavili! Hvala vam.",
+    },
+    contactForm: {
+      title: "Kontaktirajte nas",
+      subtitle: "Ispunite formular i odgovorićemo vam u roku od 24 sata",
+      name: "Vaše ime i prezime",
+      email: "E-mail adresa",
+      phone: "Broj telefona",
+      subject: "Tema",
+      message: "Vaša poruka",
+      send: "Pošalji poruku",
+      success: "Poruka je uspešno poslata! Odgovorićemo vam u što kraćem roku.",
+      subjects: [
+        "Potrebna mi je pomoć",
+        "Želim da postanem volonter",
+        "Interesuje me partnerstvo",
+        "Imam pitanje",
+        "Drugo",
+      ],
+    },
+    news: {
+      title: "Vesti",
+      items: [
+        {
+          title: "Zahvaljujemo se od srca",
+          excerpt:
+            'Zahvaljujemo se od srca "Catalist" što su prepoznali naš rad',
+        },
+        {
+          title: 'Republička nagrada za Udruženje građana \u201ESrce na dlanu\u201C Banja Luka',
+          excerpt:
+            'Republička nagrada za Udruženje građana \u201ESrce na dlanu\u201C Banja Luka',
+        },
+        {
+          title: "Zahvaljujemo se od srca Urošu M. na poklonjenoj pesmi našem Udruženju",
+          excerpt:
+            "Zahvaljujemo se od srca Urošu M. na poklonjenoj pesmi našem Udruženju",
+        },
+      ],
+    },
+    stats: {
+      donations: "KM Donacija",
+      volunteers: "Volontera",
+      families: "Porodica",
+      cities: "Gradova",
+    },
+    footer: {
+      copyright: "UG Srce na Dlanu 2026. Sva prava zadržana.",
+      description: "Udruženje građana Srce na Dlanu Banja Luka",
+      socialTitle: "Pratite nas",
+      quickLinks: "Brzi linkovi",
+      contactTitle: "Kontakt",
     },
   },
   en: {

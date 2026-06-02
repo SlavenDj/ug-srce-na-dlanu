@@ -52,6 +52,12 @@ export default function Navbar() {
               className={`lang-btn ${language === "sr" ? "active" : ""}`}
               onClick={() => setLanguage("sr")}
             >
+              СР
+            </button>
+            <button
+              className={`lang-btn ${language === "sr-latin" ? "active" : ""}`}
+              onClick={() => setLanguage("sr-latin")}
+            >
               SR
             </button>
             <button
