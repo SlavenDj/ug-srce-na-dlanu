@@ -2,16 +2,15 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function Timeline() {
   const { t } = useLanguage();
-  const { timeline } = t;
+  const { timeline } = t.about;
 
   return (
     <section className="timeline-section">
       <div className="container">
-        <h2 className="section-title">{timeline.title}</h2>
-        <p className="timeline-subtitle">{timeline.subtitle}</p>
+        <h2 className="section-title">{t.about.foundingStory}</h2>
 
         <div className="timeline">
-          {timeline.items.map((item, i) => (
+          {timeline.map((item, i) => (
             <div className={`timeline-item ${i % 2 === 0 ? "left" : "right"}`} key={i}>
               <div className="timeline-dot" />
               <div className="timeline-card">

@@ -3,7 +3,7 @@ import { useLanguage } from "../context/LanguageContext";
 
 export default function ContactForm() {
   const { t } = useLanguage();
-  const { contactForm } = t;
+  const { contactForm, contactInfo } = t;
   const [submitted, setSubmitted] = useState(false);
   const [form, setForm] = useState({
     name: "",
@@ -36,25 +36,25 @@ export default function ContactForm() {
               <div className="contact-info-item">
                 <span className="contact-info-icon">📍</span>
                 <div>
-                  <strong>Бања Лука, Босна и Херцеговина</strong>
+                  <strong>{contactInfo.address}</strong>
                 </div>
               </div>
               <div className="contact-info-item">
                 <span className="contact-info-icon">📧</span>
                 <div>
-                  <strong>info@srceanadlanu.org</strong>
+                  <strong>{contactInfo.email}</strong>
                 </div>
               </div>
               <div className="contact-info-item">
                 <span className="contact-info-icon">📞</span>
                 <div>
-                  <strong>+387 XX XXX XXX</strong>
+                  <strong>{contactInfo.phone}</strong>
                 </div>
               </div>
               <div className="contact-info-item">
                 <span className="contact-info-icon">⏰</span>
                 <div>
-                  <strong>Pon - Pet: 08:00 - 16:00</strong>
+                  <strong>{contactInfo.workingHours}</strong>
                 </div>
               </div>
             </div>
@@ -70,7 +70,7 @@ export default function ContactForm() {
                   className="btn btn-secondary"
                   onClick={() => setSubmitted(false)}
                 >
-                  Пошаљи нову поруку
+                  {contactForm.send}
                 </button>
               </div>
             ) : (

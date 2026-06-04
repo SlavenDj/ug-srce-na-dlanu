@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   return (
     <footer id="contact" className="footer">
@@ -34,23 +35,25 @@ export default function Footer() {
           <div className="footer-links">
             <h4>{t.footer.quickLinks}</h4>
             <ul>
-              <li><a href="#about">{t.nav.about}</a></li>
-              <li><a href="#actions">{t.nav.actions}</a></li>
-              <li><a href="#news">{t.nav.news}</a></li>
-              <li><a href="#volunteer">{t.nav.volunteer}</a></li>
-              <li><a href="#partners">{t.nav.partners}</a></li>
+              <li><Link to="/about">{t.nav.about}</Link></li>
+              <li><Link to="/projects">{t.nav.actions}</Link></li>
+              <li><Link to="/news">{t.nav.news}</Link></li>
+              <li><Link to="/volunteering">{t.nav.volunteer}</Link></li>
+              <li><Link to="/donate">{t.nav.donate}</Link></li>
+              <li><Link to="/bazar">{language === "sr" ? "Базар" : language === "sr-latin" ? "Bazar" : "Bazar"}</Link></li>
+              <li><Link to="/request-help">{language === "sr" ? "Помоћ" : language === "sr-latin" ? "Pomoć" : "Help"}</Link></li>
             </ul>
           </div>
 
           <div className="footer-contact">
             <h4>{t.footer.contactTitle}</h4>
-            <p>Бања Лука, Босна и Херцеговина</p>
+            <p>{language === "sr" ? "Бања Лука, Босна и Херцеговина" : language === "sr-latin" ? "Banja Luka, Bosna i Hercegovina" : "Banja Luka, Bosnia and Herzegovina"}</p>
             <p>info@srceanadlanu.org</p>
             <p>+387 XX XXX XXX</p>
             <div className="footer-donate">
-              <a href="#volunteer" className="btn btn-primary btn-sm">
+              <Link to="/donate" className="btn btn-primary btn-sm">
                 {t.hero.cta}
-              </a>
+              </Link>
             </div>
           </div>
         </div>

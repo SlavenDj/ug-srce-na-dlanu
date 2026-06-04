@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Navbar() {
@@ -6,23 +7,23 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#home", label: t.nav.home },
-    { href: "#about", label: t.nav.about },
-    { href: "#team", label: t.nav.team },
-    { href: "#actions", label: t.nav.actions },
-    { href: "#gallery", label: t.nav.gallery },
-    { href: "#partners", label: t.nav.partners },
-    { href: "#faq", label: t.nav.faq },
-    { href: "#news", label: t.nav.news },
-    { href: "#contact", label: t.nav.contact },
+    { to: "/", label: t.nav.home },
+    { to: "/about", label: t.nav.about },
+    { to: "/volunteering", label: t.nav.volunteer },
+    { to: "/projects", label: t.nav.actions },
+    { to: "/news", label: t.nav.news },
+    { to: "/donate", label: t.nav.donate },
+    { to: "/bazar", label: language === "sr" ? "Базар" : language === "sr-latin" ? "Bazar" : "Bazar" },
+    { to: "/request-help", label: language === "sr" ? "Помоћ" : language === "sr-latin" ? "Pomoć" : "Help" },
+    { to: "/contact", label: t.nav.contact },
   ];
 
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <a href="#home" className="nav-logo">
+        <Link to="/" className="nav-logo" onClick={() => setMenuOpen(false)}>
           <span className="logo-heart">❤</span> Срце на Длану
-        </a>
+        </Link>
 
         <button
           className={`hamburger ${menuOpen ? "open" : ""}`}
@@ -36,16 +37,16 @@ export default function Navbar() {
 
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           {navLinks.map((link) => (
-            <li key={link.href}>
-              <a href={link.href} onClick={() => setMenuOpen(false)}>
+            <li key={link.to}>
+              <Link to={link.to} onClick={() => setMenuOpen(false)}>
                 {link.label}
-              </a>
+              </Link>
             </li>
           ))}
           <li>
-            <a href="#volunteer" className="nav-cta" onClick={() => setMenuOpen(false)}>
+            <Link to="/volunteering" className="nav-cta" onClick={() => setMenuOpen(false)}>
               {t.nav.volunteer}
-            </a>
+            </Link>
           </li>
           <li className="lang-switch">
             <button

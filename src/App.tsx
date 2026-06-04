@@ -1,52 +1,43 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "./context/LanguageContext";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Timeline from "./components/Timeline";
-import Impact from "./components/Impact";
-import Goals from "./components/Goals";
-import Actions from "./components/Actions";
-import CTABanner from "./components/CTABanner";
-import Team from "./components/Team";
-import Partners from "./components/Partners";
-import Gallery from "./components/Gallery";
-import Volunteer from "./components/Volunteer";
-import Testimonials from "./components/Testimonials";
-import FAQ from "./components/FAQ";
-import Help from "./components/Help";
-import ContactForm from "./components/ContactForm";
-import Newsletter from "./components/Newsletter";
-import News from "./components/News";
-import Stats from "./components/Stats";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 import BackToTop from "./components/BackToTop";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import VolunteerPage from "./pages/VolunteerPage";
+import ProjectsPage from "./pages/ProjectsPage";
+import NewsPage from "./pages/NewsPage";
+import DonatePage from "./pages/DonatePage";
+import BazarPage from "./pages/BazarPage";
+import RequestHelpPage from "./pages/RequestHelpPage";
+import ContactPage from "./pages/ContactPage";
 
 export default function App() {
   return (
-    <LanguageProvider>
-      <div className="app">
-        <Navbar />
-        <Hero />
-        <About />
-        <Timeline />
-        <Impact />
-        <Goals />
-        <Actions />
-        <CTABanner />
-        <Team />
-        <Partners />
-        <Gallery />
-        <Volunteer />
-        <Testimonials />
-        <FAQ />
-        <Help />
-        <ContactForm />
-        <Newsletter />
-        <News />
-        <Stats />
-        <Footer />
-        <BackToTop />
-      </div>
-    </LanguageProvider>
+    <BrowserRouter>
+      <LanguageProvider>
+        <div className="app">
+          <ScrollToTop />
+          <Navbar />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/volunteering" element={<VolunteerPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              <Route path="/donate" element={<DonatePage />} />
+              <Route path="/bazar" element={<BazarPage />} />
+              <Route path="/request-help" element={<RequestHelpPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+            </Routes>
+          </main>
+          <Footer />
+          <BackToTop />
+        </div>
+      </LanguageProvider>
+    </BrowserRouter>
   );
 }
