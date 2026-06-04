@@ -18,7 +18,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <LanguageProvider>
-        <div className="app">
+        <div className="min-h-screen">
           <ScrollToTop />
           <Navbar />
           <main>

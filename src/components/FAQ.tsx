@@ -7,27 +7,29 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="faq">
-      <div className="container">
-        <h2 className="section-title">{faq.title}</h2>
-        <p className="faq-subtitle">{faq.subtitle}</p>
+    <section id="faq" className="py-25 bg-off-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-secondary mb-12">{faq.title}</h2>
+        <p className="text-center text-gray-500 text-[1.05rem] mt-[-32px] mb-12">{faq.subtitle}</p>
 
-        <div className="faq-list">
+        <div className="max-w-[800px] mx-auto">
           {faq.items.map((item, i) => (
             <div
-              className={`faq-item ${openIndex === i ? "open" : ""}`}
+              className={`bg-white border border-gray-200 rounded-card mb-3 overflow-hidden transition-all duration-300 ${openIndex === i ? "border-primary shadow-card" : "hover:border-primary"}`}
               key={i}
             >
               <button
-                className="faq-question"
+                className="w-full flex justify-between items-center py-5 px-6 bg-transparent border-none cursor-pointer text-base font-semibold text-secondary text-left"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
                 <span>{item.question}</span>
-                <span className="faq-toggle">{openIndex === i ? "−" : "+"}</span>
+                <span className={`text-[1.4rem] text-primary font-light w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 shrink-0 transition-all duration-300 ${openIndex === i ? "bg-primary text-white" : ""}`}>
+                  {openIndex === i ? "−" : "+"}
+                </span>
               </button>
               {openIndex === i && (
-                <div className="faq-answer">
-                  <p>{item.answer}</p>
+                <div className="px-6 pb-5">
+                  <p className="text-[0.95rem] text-gray-500 leading-[1.7]">{item.answer}</p>
                 </div>
               )}
             </div>

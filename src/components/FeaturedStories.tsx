@@ -5,19 +5,19 @@ export default function FeaturedStories() {
   const { featuredStories } = t;
 
   return (
-    <section className="featured-stories">
-      <div className="container">
-        <h2 className="section-title">{featuredStories.title}</h2>
-        <p className="featured-stories-subtitle">{featuredStories.subtitle}</p>
-        <div className="stories-grid">
+    <section className="py-15 bg-off-white">
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-secondary mb-12">{featuredStories.title}</h2>
+        <p className="text-center text-gray-500 text-[1.1rem] mt-[-1rem] mb-12">{featuredStories.subtitle}</p>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 max-md:grid-cols-1">
           {featuredStories.items.map((story, i) => (
-            <div className="story-card" key={i}>
-              <div className="story-image" style={{ background: story.color }}>
-                <span className="story-initials">{story.initials}</span>
+            <div className="bg-white rounded-2xl overflow-hidden shadow-card-hover transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]" key={i}>
+              <div className="h-20 flex items-center justify-center" style={{ background: story.color }}>
+                <span className="text-2xl font-bold text-white">{story.initials}</span>
               </div>
-              <div className="story-content">
-                <h3>{story.name}</h3>
-                <p className="story-quote">"{story.quote}"</p>
+              <div className="p-6">
+                <h3 className="text-[1.1rem] font-semibold mb-3">{story.name}</h3>
+                <p className="text-gray-500 italic leading-[1.6] text-[0.95rem]">&ldquo;{story.quote}&rdquo;</p>
               </div>
             </div>
           ))}

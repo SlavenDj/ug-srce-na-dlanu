@@ -16,16 +16,16 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="newsletter">
-      <div className="container">
-        <div className="newsletter-content">
-          <div className="newsletter-text">
-            <h2>{newsletter.title}</h2>
-            <p>{newsletter.subtitle}</p>
+    <section className="py-20 bg-secondary">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="flex items-center justify-between gap-10 flex-wrap max-md:flex-col max-md:text-center">
+          <div>
+            <h2 className="text-[1.8rem] text-white mb-2">{newsletter.title}</h2>
+            <p className="text-white/70 text-base">{newsletter.subtitle}</p>
           </div>
-          <form className="newsletter-form" onSubmit={handleSubmit}>
+          <form className="flex gap-3 flex-1 max-w-[500px] max-md:max-w-full max-md:w-full" onSubmit={handleSubmit}>
             {submitted ? (
-              <div className="newsletter-success">{newsletter.success}</div>
+              <div className="text-green-500 font-semibold text-base py-3.5 px-5">{newsletter.success}</div>
             ) : (
               <>
                 <input
@@ -34,8 +34,9 @@ export default function Newsletter() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  className="flex-1 py-3.5 px-5 border-2 border-white/20 bg-white/10 rounded-xl text-white text-[0.95rem] outline-none transition-all duration-300 placeholder:text-white/50 focus:border-accent focus:bg-white/15 max-md:flex-none max-md:w-full"
                 />
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="inline-block px-9 py-3.5 rounded-xl font-semibold text-[1rem] cursor-pointer border-none transition-all duration-300 bg-accent text-white hover:bg-[#d35400] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.4)]">
                   {newsletter.button}
                 </button>
               </>

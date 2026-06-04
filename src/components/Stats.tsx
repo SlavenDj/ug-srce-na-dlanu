@@ -12,13 +12,13 @@ export default function Stats() {
   ];
 
   return (
-    <section className="stats">
-      <div className="container">
-        <div className="stats-grid">
+    <section className="py-20 bg-gradient-to-br from-primary to-primary-dark">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="grid grid-cols-4 gap-8 text-center max-md:grid-cols-2 max-md:gap-6">
           {statsData.map((stat, i) => (
-            <div className="stat-item" key={i}>
-              <div className="stat-value">{stat.value}</div>
-              <div className="stat-label">{stat.label}</div>
+            <div key={i}>
+              <div className="text-[clamp(2rem,4vw,3rem)] font-extrabold text-white mb-2">{stat.value}</div>
+              <div className="text-[0.95rem] text-white/85 font-medium">{stat.label}</div>
             </div>
           ))}
         </div>

@@ -16,7 +16,10 @@ export default function ScrollReveal({ children, className = "", delay = 0 }: Pr
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => el.classList.add("revealed"), delay);
+          setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, delay);
           observer.unobserve(el);
         }
       },
@@ -28,7 +31,11 @@ export default function ScrollReveal({ children, className = "", delay = 0 }: Pr
   }, [delay]);
 
   return (
-    <div ref={ref} className={`scroll-reveal ${className}`}>
+    <div
+      ref={ref}
+      className={className}
+      style={{ opacity: 0, transform: "translateY(30px)", transition: "opacity 0.6s ease, transform 0.6s ease" }}
+    >
       {children}
     </div>
   );
