@@ -15,6 +15,17 @@ export interface Content {
     team: string;
     gallery: string;
     faq: string;
+    archive: string;
+    organization: string;
+    ourWork: string;
+    support: string;
+  };
+  archive: {
+    title: string;
+    subtitle: string;
+    back: string;
+    actions: string;
+    browse: string;
   };
   hero: {
     title: string;
@@ -211,6 +222,32 @@ export interface Content {
     success: string;
     subjects: string[];
   };
+  joinForm: {
+    title: string;
+    subtitle: string;
+    nameLabel: string;
+    emailLabel: string;
+    phoneLabel: string;
+    interestLabel: string;
+    interestOptions: string[];
+    messageLabel: string;
+    sendButton: string;
+    successMessage: string;
+  };
+  sponsorForm: {
+    title: string;
+    subtitle: string;
+    companyLabel: string;
+    contactPersonLabel: string;
+    nameLabel: string;
+    emailLabel: string;
+    phoneLabel: string;
+    typeLabel: string;
+    typeOptions: string[];
+    messageLabel: string;
+    sendButton: string;
+    successMessage: string;
+  };
   news: {
     title: string;
     items: { title: string; excerpt: string }[];
@@ -289,6 +326,17 @@ export const content: Record<Language, Content> = {
       team: "ТИМ",
       gallery: "ГАЛЕРИЈА",
       faq: "ЧПП",
+      archive: "АРХИВА",
+      organization: "УДРУЖЕЊЕ",
+      ourWork: "НАШ РАД",
+      support: "ПОДРШКА",
+    },
+    archive: {
+      title: "Arhiva",
+      subtitle: "Pregled svih humanitarnih akcija i aktivnosti kroz godine",
+      back: "Nazad na arhivu",
+      actions: "akcija",
+      browse: "Pregledaj",
     },
     hero: {
       title: "Срце на Длану",
@@ -796,6 +844,32 @@ export const content: Record<Language, Content> = {
         "Друго",
       ],
     },
+    joinForm: {
+      title: "Придружи нам се",
+      subtitle: "Постани дио нашег тима и заједно чинимо разлику",
+      nameLabel: "Име и презиме",
+      emailLabel: "Емаил адреса",
+      phoneLabel: "Број телефона",
+      interestLabel: "Област интересовања",
+      interestOptions: ["Волонтирање", "Чланство", "Обоје"],
+      messageLabel: "Зашто желиш да се придружиш?",
+      sendButton: "Пошаљи пријаву",
+      successMessage: "Пријава је успјешно послата! Контактираћемо вас у најкраћем року.",
+    },
+    sponsorForm: {
+      title: "Постани спонзор",
+      subtitle: "Подржите наш рад и помозите онима којима је помоћ најпотребнија",
+      companyLabel: "Назив компаније / организације",
+      contactPersonLabel: "Контакт особа",
+      nameLabel: "Име и презиме",
+      emailLabel: "Емаил адреса",
+      phoneLabel: "Број телефона",
+      typeLabel: "Врста спонзорства",
+      typeOptions: ["Финансијско", "Донација у роби", "Донација у услугама", "Друго"],
+      messageLabel: "Додатне информације",
+      sendButton: "Пошаљи упит",
+      successMessage: "Упит је успјешно послат! Одговорићемо вам у најкраћем року.",
+    },
       news: {
         title: "Новости",
         items: [
@@ -979,6 +1053,17 @@ export const content: Record<Language, Content> = {
       team: "TIM",
       gallery: "GALERIJA",
       faq: "ČPP",
+      archive: "ARHIVA",
+      organization: "UDRUŽENJE",
+      ourWork: "NAŠ RAD",
+      support: "PODRŠKA",
+    },
+    archive: {
+      title: "Arhiva",
+      subtitle: "Pregled svih humanitarnih akcija i aktivnosti kroz godine",
+      back: "Nazad na arhivu",
+      actions: "akcija",
+      browse: "Pregledaj",
     },
     hero: {
       title: "Srce na Dlanu",
@@ -1486,6 +1571,32 @@ export const content: Record<Language, Content> = {
         "Drugo",
       ],
     },
+    joinForm: {
+      title: "Pridruži nam se",
+      subtitle: "Postani deo našeg tima i zajedno činimo razliku",
+      nameLabel: "Ime i prezime",
+      emailLabel: "Email adresa",
+      phoneLabel: "Broj telefona",
+      interestLabel: "Oblast interesovanja",
+      interestOptions: ["Volontiranje", "Članstvo", "Oboje"],
+      messageLabel: "Zašto želiš da se pridružiš?",
+      sendButton: "Pošalji prijavu",
+      successMessage: "Prijava je uspešno poslata! Kontaktiraćemo vas u najkraćem roku.",
+    },
+    sponsorForm: {
+      title: "Postani sponzor",
+      subtitle: "Podržite naš rad i pomozite onima kojima je pomoć najpotrebnija",
+      companyLabel: "Naziv kompanije / organizacije",
+      contactPersonLabel: "Kontakt osoba",
+      nameLabel: "Ime i prezime",
+      emailLabel: "Email adresa",
+      phoneLabel: "Broj telefona",
+      typeLabel: "Vrsta sponzorstva",
+      typeOptions: ["Finansijsko", "Donacija u robi", "Donacija u uslugama", "Drugo"],
+      messageLabel: "Dodatne informacije",
+      sendButton: "Pošalji upit",
+      successMessage: "Upit je uspešno poslat! Odgovorićemo vam u najkraćem roku.",
+    },
     news: {
       title: "Novosti",
       items: [
@@ -1669,9 +1780,20 @@ export const content: Record<Language, Content> = {
       team: "TEAM",
       gallery: "GALLERY",
       faq: "FAQ",
+      archive: "ARCHIVE",
+      organization: "ABOUT",
+      ourWork: "OUR WORK",
+      support: "SUPPORT",
+    },
+    archive: {
+      title: "Archive",
+      subtitle: "A review of all humanitarian actions and activities through the years",
+      back: "Back to archive",
+      actions: "actions",
+      browse: "Browse",
     },
     hero: {
-      title: "Heart in Your Palm",
+      title: "Srce na Dlanu",
       subtitle: "Volunteering and humanitarian actions for a better tomorrow",
       cta: "Join us",
       ctaSecondary: "Learn more",
@@ -2175,6 +2297,32 @@ export const content: Record<Language, Content> = {
         "I have a question",
         "Other",
       ],
+    },
+    joinForm: {
+      title: "Join Us",
+      subtitle: "Become part of our team and make a difference together",
+      nameLabel: "Full name",
+      emailLabel: "Email address",
+      phoneLabel: "Phone number",
+      interestLabel: "Area of interest",
+      interestOptions: ["Volunteering", "Membership", "Both"],
+      messageLabel: "Why do you want to join?",
+      sendButton: "Send application",
+      successMessage: "Application sent successfully! We will contact you shortly.",
+    },
+    sponsorForm: {
+      title: "Become a Sponsor",
+      subtitle: "Support our work and help those who need it most",
+      companyLabel: "Company / Organization name",
+      contactPersonLabel: "Contact person",
+      nameLabel: "Full name",
+      emailLabel: "Email address",
+      phoneLabel: "Phone number",
+      typeLabel: "Type of sponsorship",
+      typeOptions: ["Financial", "Goods donation", "Service donation", "Other"],
+      messageLabel: "Additional information",
+      sendButton: "Send inquiry",
+      successMessage: "Inquiry sent successfully! We will respond as soon as possible.",
     },
     news: {
       title: "News",

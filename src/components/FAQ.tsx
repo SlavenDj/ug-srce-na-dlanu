@@ -15,7 +15,7 @@ export default function FAQ() {
         <div className="max-w-[800px] mx-auto">
           {faq.items.map((item, i) => (
             <div
-              className={`bg-white border border-gray-200 rounded-card mb-3 overflow-hidden transition-all duration-300 ${openIndex === i ? "border-primary shadow-card" : "hover:border-primary"}`}
+              className={`bg-white dark:bg-[#171923] border border-gray-200 dark:border-[#2a2d3a] rounded-card mb-3 overflow-hidden transition-all duration-300 ${openIndex === i ? "border-primary shadow-card" : "hover:border-primary"}`}
               key={i}
             >
               <button
@@ -23,7 +23,7 @@ export default function FAQ() {
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
                 <span>{item.question}</span>
-                <span className={`text-[1.4rem] text-primary font-light w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 shrink-0 transition-all duration-300 ${openIndex === i ? "bg-primary text-white" : ""}`}>
+                <span className={`text-[1.4rem] text-primary font-light w-7 h-7 flex items-center justify-center rounded-full bg-gray-100 dark:bg-[#1f2128] shrink-0 transition-all duration-300 ${openIndex === i ? "bg-primary text-white" : ""}`}>
                   {openIndex === i ? "−" : "+"}
                 </span>
               </button>

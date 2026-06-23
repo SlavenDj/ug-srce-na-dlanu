@@ -6,7 +6,7 @@ export default function CTACards() {
   const { ctaCards } = t;
 
   return (
-    <section className="py-15 bg-white">
+    <section className="py-15 bg-white dark:bg-[#0f1117]">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-secondary mb-12">{ctaCards.title}</h2>
         <p className="text-center text-gray-500 text-[1.1rem] mt-[-1rem] mb-12">{ctaCards.subtitle}</p>

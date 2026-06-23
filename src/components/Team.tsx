@@ -12,7 +12,7 @@ export default function Team() {
 
         <div className="grid grid-cols-3 gap-7 max-md:grid-cols-2 max-sm:grid-cols-1">
           {team.map((member, i) => (
-            <div className="bg-white rounded-card p-8 text-center shadow-card border border-gray-200 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1" key={i}>
+            <div className="bg-white dark:bg-[#171923] rounded-card p-8 text-center shadow-card border border-gray-200 dark:border-[#2a2d3a] transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1" key={i}>
               <div className="w-[72px] h-[72px] bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white text-[1.4rem] font-bold mx-auto mb-4">{member.initials}</div>
               <h3 className="text-[1.1rem] text-secondary mb-1">{member.name}</h3>
               <div className="text-[0.85rem] text-primary font-semibold mb-3">{member.role}</div>

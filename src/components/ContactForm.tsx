@@ -1,5 +1,18 @@
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Button } from "@/components/ui/button";
+
+const inputClasses =
+  "h-auto py-3 px-4 border-2 border-gray-200 dark:border-[#2a2d3a] rounded-card-sm text-[0.95rem] bg-white dark:bg-[#171923] text-gray-900 focus:border-primary";
 
 export default function ContactForm() {
   const { t } = useLanguage();
@@ -14,7 +27,7 @@ export default function ContactForm() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -26,7 +39,7 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact-form" className="py-25 bg-white">
+    <section id="contact-form" className="py-25 bg-white dark:bg-[#0f1117]">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-[1fr_1.3fr] gap-15 items-start max-md:grid-cols-1 max-md:gap-10">
           <div>
@@ -64,84 +77,87 @@ export default function ContactForm() {
             {submitted ? (
               <div className="text-center py-10 px-5">
                 <span className="inline-flex w-16 h-16 bg-green-600 text-white rounded-full items-center justify-center text-2xl mb-4">✓</span>
-                <p className="text-gray-700 text-[1.05rem] mb-6">{contactForm.success}</p>
-                <button
+                <p className="text-gray-700 dark:text-[#d1d5db] text-[1.05rem] mb-6">{contactForm.success}</p>
+                <Button
                   type="button"
-                  className="inline-block px-9 py-3.5 rounded-xl font-semibold text-[1rem] cursor-pointer border-2 border-primary bg-transparent text-primary transition-all duration-300 hover:bg-primary hover:text-white"
+                  variant="primary-outline"
+                  size="xl"
+                  className="rounded-xl"
                   onClick={() => setSubmitted(false)}
                 >
                   {contactForm.send}
-                </button>
+                </Button>
               </div>
             ) : (
               <>
                 <div className="grid grid-cols-2 gap-4 mb-4 max-sm:grid-cols-1">
                   <div className="flex flex-col">
-                    <label className="text-[0.88rem] font-semibold text-gray-700 mb-1.5">{contactForm.name}</label>
-                    <input
+                    <label className="text-[0.88rem] font-semibold text-gray-700 dark:text-[#d1d5db] mb-1.5">{contactForm.name}</label>
+                    <Input
                       type="text"
                       name="name"
                       value={form.name}
                       onChange={handleChange}
                       required
-                      className="py-3 px-4 border-2 border-gray-200 rounded-card-sm text-[0.95rem] bg-white text-gray-900 outline-none transition-all duration-300 font-[inherit] focus:border-primary"
+                      className={inputClasses}
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-[0.88rem] font-semibold text-gray-700 mb-1.5">{contactForm.email}</label>
-                    <input
+                    <label className="text-[0.88rem] font-semibold text-gray-700 dark:text-[#d1d5db] mb-1.5">{contactForm.email}</label>
+                    <Input
                       type="email"
                       name="email"
                       value={form.email}
                       onChange={handleChange}
                       required
-                      className="py-3 px-4 border-2 border-gray-200 rounded-card-sm text-[0.95rem] bg-white text-gray-900 outline-none transition-all duration-300 font-[inherit] focus:border-primary"
+                      className={inputClasses}
                     />
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-4 mb-4 max-sm:grid-cols-1">
                   <div className="flex flex-col">
-                    <label className="text-[0.88rem] font-semibold text-gray-700 mb-1.5">{contactForm.phone}</label>
-                    <input
+                    <label className="text-[0.88rem] font-semibold text-gray-700 dark:text-[#d1d5db] mb-1.5">{contactForm.phone}</label>
+                    <Input
                       type="tel"
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      className="py-3 px-4 border-2 border-gray-200 rounded-card-sm text-[0.95rem] bg-white text-gray-900 outline-none transition-all duration-300 font-[inherit] focus:border-primary"
+                      className={inputClasses}
                     />
                   </div>
                   <div className="flex flex-col">
-                    <label className="text-[0.88rem] font-semibold text-gray-700 mb-1.5">{contactForm.subject}</label>
-                    <select
-                      name="subject"
+                    <label className="text-[0.88rem] font-semibold text-gray-700 dark:text-[#d1d5db] mb-1.5">{contactForm.subject}</label>
+                    <Select
                       value={form.subject}
-                      onChange={handleChange}
-                      required
-                      className="py-3 px-4 border-2 border-gray-200 rounded-card-sm text-[0.95rem] bg-white text-gray-900 outline-none transition-all duration-300 font-[inherit] focus:border-primary"
+                      onValueChange={(value) => setForm({ ...form, subject: value ?? "" })}
                     >
-                      <option value="">{contactForm.subject}</option>
-                      {contactForm.subjects.map((s, i) => (
-                        <option key={i} value={s}>
-                          {s}
-                        </option>
-                      ))}
-                    </select>
+                      <SelectTrigger className="h-auto py-3 px-4 border-2 border-gray-200 dark:border-[#2a2d3a] rounded-card-sm text-[0.95rem] bg-white dark:bg-[#171923] text-gray-900 focus:border-primary w-full">
+                        <SelectValue placeholder={contactForm.subject} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {contactForm.subjects.map((s, i) => (
+                          <SelectItem key={i} value={s}>
+                            {s}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                 </div>
                 <div className="flex flex-col mb-5">
-                  <label className="text-[0.88rem] font-semibold text-gray-700 mb-1.5">{contactForm.message}</label>
-                  <textarea
+                  <label className="text-[0.88rem] font-semibold text-gray-700 dark:text-[#d1d5db] mb-1.5">{contactForm.message}</label>
+                  <Textarea
                     name="message"
                     rows={5}
                     value={form.message}
                     onChange={handleChange}
                     required
-                    className="py-3 px-4 border-2 border-gray-200 rounded-card-sm text-[0.95rem] bg-white text-gray-900 outline-none transition-all duration-300 font-[inherit] resize-y focus:border-primary"
+                    className={`${inputClasses} resize-y`}
                   />
                 </div>
-                <button type="submit" className="inline-block px-9 py-3.5 rounded-xl font-semibold text-[1rem] cursor-pointer border-none transition-all duration-300 bg-accent text-white hover:bg-[#d35400] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.4)]">
+                <Button type="submit" variant="accent" size="xl" className="rounded-xl">
                   {contactForm.send}
-                </button>
+                </Button>
               </>
             )}
           </form>

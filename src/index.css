@@ -83,6 +83,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.dark body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -93,4 +98,30 @@ body {
   html {
     @apply font-sans;
   }
+}
+
+.dark {
+  --color-background: #0f1117;
+  --color-foreground: #e5e7eb;
+  --color-muted: #1f2128;
+  --color-muted-foreground: #9ca3af;
+  --color-popover: #171923;
+  --color-popover-foreground: #e5e7eb;
+  --color-card: #171923;
+  --color-card-foreground: #e5e7eb;
+  --color-border: #2a2d3a;
+  --color-input: #2a2d3a;
+  --color-secondary: #cbd5e1;
+  --color-secondary-light: #94a3b8;
+  --color-secondary-foreground: #0f1117;
+  --color-off-white: #1a1b23;
+  --color-gray-100: #1f2128;
+  --color-gray-200: #2a2d3a;
+  --color-gray-300: #374151;
+  --color-gray-500: #9ca3af;
+  --color-gray-700: #d1d5db;
+  --color-gray-900: #f3f4f6;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-card-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
 }

@@ -1,4 +1,13 @@
 import { useLanguage } from "../context/LanguageContext";
+import { Button } from "@/components/ui/button";
+import {
+  DialogRoot,
+  DialogTrigger,
+  DialogPopup,
+  DialogClose,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import JoinForm from "./JoinForm";
 
 export default function Volunteer() {
   const { t } = useLanguage();
@@ -13,18 +22,29 @@ export default function Volunteer() {
             <div className="text-[3rem] mb-5">💰</div>
             <h3 className="text-[1.3rem] text-white mb-4">{t.volunteer.sponsorTitle}</h3>
             <p className="text-[0.95rem] text-white/80 leading-[1.7] mb-6">{t.volunteer.sponsorDescription}</p>
-            <a href="#contact" className="inline-block px-9 py-3.5 rounded-xl font-semibold no-underline cursor-pointer border-none transition-all duration-300 bg-accent text-white hover:bg-[#d35400] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.4)]">
+            <Button variant="accent" size="xl" className="rounded-xl" render={<a href="/donate" />}>
               {t.volunteer.cta}
-            </a>
+            </Button>
           </div>
 
           <div className="bg-white/10 backdrop-blur-2xl border border-white/15 rounded-card p-10 text-center transition-all duration-300 hover:bg-white/15 hover:-translate-y-1">
             <div className="text-[3rem] mb-5">🙋</div>
             <h3 className="text-[1.3rem] text-white mb-4">{t.volunteer.volunteerTitle}</h3>
             <p className="text-[0.95rem] text-white/80 leading-[1.7] mb-6">{t.volunteer.volunteerDescription}</p>
-            <a href="#contact" className="inline-block px-9 py-3.5 rounded-xl font-semibold no-underline cursor-pointer border-none transition-all duration-300 bg-accent text-white hover:bg-[#d35400] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.4)]">
-              {t.volunteer.cta}
-            </a>
+            <DialogRoot>
+              <DialogTrigger
+                render={<Button variant="accent" size="xl" className="rounded-xl" />}
+              >
+                {t.volunteer.cta}
+              </DialogTrigger>
+              <DialogPopup>
+                <DialogClose>✕</DialogClose>
+                <DialogTitle>{t.volunteer.volunteerTitle}</DialogTitle>
+                <div className="mt-6">
+                  <JoinForm />
+                </div>
+              </DialogPopup>
+            </DialogRoot>
           </div>
         </div>
       </div>

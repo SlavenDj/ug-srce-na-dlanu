@@ -5,13 +5,13 @@ export default function Actions() {
   const { actions } = t;
 
   return (
-    <section id="actions" className="py-25 bg-white">
+    <section id="actions" className="py-25 bg-white dark:bg-[#0f1117]">
       <div className="mx-auto max-w-7xl px-6">
         <h2 className="text-center text-3xl md:text-4xl font-bold text-secondary mb-12">{actions.title}</h2>
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(340px,1fr))] gap-8 max-md:grid-cols-1">
           {actions.events.map((event, i) => (
-            <div className="bg-white border border-gray-200 rounded-card p-8 transition-all duration-300 hover:border-primary hover:shadow-card-hover" key={i}>
+            <div className="bg-white dark:bg-[#171923] border border-gray-200 dark:border-[#2a2d3a] rounded-card p-8 transition-all duration-300 hover:border-primary hover:shadow-card-hover" key={i}>
               <div className="flex items-start gap-4 mb-5">
                 <div className="text-[2rem] font-extrabold text-primary leading-none">
                   {String(i + 1).padStart(2, "0")}

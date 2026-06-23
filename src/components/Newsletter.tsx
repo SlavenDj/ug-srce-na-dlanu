@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useLanguage } from "../context/LanguageContext";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function Newsletter() {
   const { t } = useLanguage();
@@ -16,7 +18,7 @@ export default function Newsletter() {
   };
 
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-20 bg-secondary dark:bg-[#1e293b]">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between gap-10 flex-wrap max-md:flex-col max-md:text-center">
           <div>
@@ -28,17 +30,17 @@ export default function Newsletter() {
               <div className="text-green-500 font-semibold text-base py-3.5 px-5">{newsletter.success}</div>
             ) : (
               <>
-                <input
+                <Input
                   type="email"
                   placeholder={newsletter.placeholder}
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  className="flex-1 py-3.5 px-5 border-2 border-white/20 bg-white/10 rounded-xl text-white text-[0.95rem] outline-none transition-all duration-300 placeholder:text-white/50 focus:border-accent focus:bg-white/15 max-md:flex-none max-md:w-full"
+                  className="h-auto flex-1 py-3.5 px-5 border-2 border-white/20 bg-white/10 rounded-xl text-white text-[0.95rem] placeholder:text-white/50 focus:border-accent focus:bg-white/15 max-md:flex-none max-md:w-full"
                 />
-                <button type="submit" className="inline-block px-9 py-3.5 rounded-xl font-semibold text-[1rem] cursor-pointer border-none transition-all duration-300 bg-accent text-white hover:bg-[#d35400] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(230,126,34,0.4)]">
+                <Button type="submit" variant="accent" size="xl" className="rounded-xl shrink-0">
                   {newsletter.button}
-                </button>
+                </Button>
               </>
             )}
           </form>

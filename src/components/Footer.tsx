@@ -5,7 +5,7 @@ export default function Footer() {
   const { t, language } = useLanguage();
 
   return (
-    <footer id="contact" className="bg-secondary text-white pt-15 pb-0">
+    <footer id="contact" className="bg-secondary dark:bg-[#1e293b] text-white pt-15 pb-0">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-[1.5fr_1fr_1fr] gap-12 mb-12 max-md:grid-cols-1 max-md:gap-8">
           <div>

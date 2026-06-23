@@ -11,7 +11,7 @@ export default function FeaturedStories() {
         <p className="text-center text-gray-500 text-[1.1rem] mt-[-1rem] mb-12">{featuredStories.subtitle}</p>
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 max-md:grid-cols-1">
           {featuredStories.items.map((story, i) => (
-            <div className="bg-white rounded-2xl overflow-hidden shadow-card-hover transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]" key={i}>
+            <div className="bg-white dark:bg-[#171923] rounded-2xl overflow-hidden shadow-card-hover transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(0,0,0,0.12)]" key={i}>
               <div className="h-20 flex items-center justify-center" style={{ background: story.color }}>
                 <span className="text-2xl font-bold text-white">{story.initials}</span>
               </div>

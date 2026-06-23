@@ -12,9 +12,9 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-7 max-md:grid-cols-1">
           {testimonials.items.map((item, i) => (
-            <div className="bg-white rounded-card p-8 shadow-card border border-gray-200 transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 relative" key={i}>
+            <div className="bg-white dark:bg-[#171923] rounded-card p-8 shadow-card border border-gray-200 dark:border-[#2a2d3a] transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 relative" key={i}>
               <div className="text-[4rem] text-primary-light/20 leading-none absolute top-4 left-6 font-serif z-[1]">&ldquo;</div>
-              <p className="text-[0.95rem] text-gray-700 leading-[1.7] italic mb-6 relative z-[1]">{item.quote}</p>
+              <p className="text-[0.95rem] text-gray-700 dark:text-[#d1d5db] leading-[1.7] italic mb-6 relative z-[1]">{item.quote}</p>
               <div className="flex items-center gap-3">
                 <div className="w-11 h-11 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-base">
                   {item.author.charAt(0)}

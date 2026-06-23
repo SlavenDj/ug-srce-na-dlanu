@@ -11,7 +11,7 @@ export default function CTABanner() {
         <h2 className="text-[clamp(1.6rem,3.5vw,2.2rem)] text-white mb-4 font-bold">{cta.title}</h2>
         <p className="text-white/85 text-[1.1rem] mb-8 leading-[1.7]">{cta.subtitle}</p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a href="#partners" className="inline-block px-9 py-3.5 rounded-xl font-bold no-underline cursor-pointer border-none transition-all duration-300 bg-white text-primary hover:bg-gray-100 hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(255,255,255,0.3)]">
+          <a href="#partners" className="inline-block px-9 py-3.5 rounded-xl font-bold no-underline cursor-pointer border-none transition-all duration-300 bg-white dark:bg-[#171923] text-primary hover:bg-gray-100 dark:hover:bg-[#1f2128] hover:-translate-y-0.5 hover:shadow-[0_6px_20px_rgba(255,255,255,0.3)]">
             {cta.primaryCta}
           </a>
           <a href="#volunteer" className="inline-block px-9 py-3.5 rounded-xl font-semibold no-underline cursor-pointer transition-all duration-300 bg-transparent text-white border-2 border-white/50 hover:bg-white/15 hover:border-white">
